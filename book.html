@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charaset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>home</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+        <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" >
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<!-- ── HEADER ── -->
+<section class="header">
+    <a href="home.html" class="logo">Travel Tour</a>
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About &amp; Packages</a>
+        <a href="package.html">Solo Travellers</a>
+        <a href="book.html" class="active">Contact Us</a>
+    </nav>
+    <div id="menu-btn" class="fas fa-bars"></div>
+</section>
+
+<!-- ── BANNER ── -->
+<div class="heading" style="background:url(images/book.jpg) no-repeat">
+    <h1>Contact Us</h1>
+</div>
+
+<!-- ── FORMS ── -->
+<div class="booking-wrapper">
+
+    <!-- FORM 1: Trip Booking -->
+    <div class="booking-card">
+        <div class="card-icon"><i class="fas fa-plane-departure"></i></div>
+        <h3>Book Your Trip</h3>
+        <p class="sub">Fill in your details and we'll get back to you within 24 hours.</p>
+
+        <form name="google-sheet-1" autocomplete="off">
+            <div class="form-group">
+                <label for="b-name">Full Name *</label>
+                <input type="text" id="b-name" name="NAME" class="form-control" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="b-email">Email Address *</label>
+                <input type="email" id="b-email" name="EMAIL" class="form-control" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+                <label for="b-phone">Contact Number *</label>
+                <input type="tel" id="b-phone" name="CONTACT NO" class="form-control" placeholder="+91 XXXXX XXXXX" required>
+            </div>
+            <div class="form-group">
+                <label for="b-date">Arrival Date *</label>
+                <input type="date" id="b-date" name="ARRIVALS" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="b-dest">Destination *</label>
+                <input type="text" id="b-dest" name="DESTINATION" class="form-control" placeholder="e.g. Manali, Ladakh, Srinagar" required>
+            </div>
+            <div class="form-group">
+                <label for="b-guests">Number of Guests *</label>
+                <input type="number" id="b-guests" name="GUESTS" class="form-control" placeholder="e.g. 2" min="1" required>
+            </div>
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane me-2"></i> Submit Booking
+            </button>
+        </form>
+    </div>
+
+    <!-- FORM 2: Feedback -->
+    <div class="booking-card">
+        <div class="card-icon"><i class="fas fa-star"></i></div>
+        <h3>Share Your Feedback</h3>
+        <p class="sub">We'd love to hear about your experience. Your feedback helps us grow!</p>
+
+        <form name="google-sheet-2" autocomplete="off" action="https://script.google.com/macros/s/AKfycbxQLlro3zOqRtlCNL4K2rY_0gtiXuS9DG9hF8CfxF6xQ4pn1SrOl5JjdCCN24UqkRpe/exec" method="post">
+            <div class="form-group">
+                <label for="f-name">Your Name *</label>
+                <input type="text" id="f-name" name="name" class="form-control" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+                <label for="f-email">Your Email *</label>
+                <input type="email" id="f-email" name="email" class="form-control" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+                <label for="f-rating">Rating *</label>
+                <select id="f-rating" name="rating" class="form-control" required>
+                    <option value="">Select rating…</option>
+                    <option value="5">⭐⭐⭐⭐⭐ Excellent (5)</option>
+                    <option value="4">⭐⭐⭐⭐ Very Good (4)</option>
+                    <option value="3">⭐⭐⭐ Good (3)</option>
+                    <option value="2">⭐⭐ Fair (2)</option>
+                    <option value="1">⭐ Poor (1)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="f-feedback">Your Feedback *</label>
+                <textarea id="f-feedback" name="feedback" class="form-control" placeholder="Tell us about your experience…" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-heart me-2"></i> Submit Feedback
+            </button>
+        </form>
+    </div>
+
+</div>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+    <div class="footer-content">
+        <h3>Travel Tour</h3>
+        <p>Discover new places, cultures, and adventures!</p>
+        <div class="social-icons">
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="icon"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="footer-bottom-text">Created By: Vaishnavi Kadam | © 2025 All rights reserved.</p>
+    </div>
+</footer>
+
+<div id="scrollTop"><i class="fas fa-arrow-up"></i></div>
+<div id="toast"></div>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
